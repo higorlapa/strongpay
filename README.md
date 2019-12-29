@@ -1,5 +1,7 @@
 # StrongPay
 
+<img src="https://github.com/lapadev/strongpay/blob/master/images/ic_stronghands_small.png?raw=true" width="60">
+
 The [StrongHands](https://www.stronghands.info/) and [StrongHands MasterNode](https://www.stronghands.info/masternodes/) **official** mobile wallet.
 
 [![GitHub stars](https://img.shields.io/github/stars/lapadev/strongpay?style=social)](https://github.com/lapadev/strongpay)
@@ -31,7 +33,7 @@ Create the UI for:
 - [ ] Swap Coins
 - [ ] Loggout
 
-### Internation­alizing
+### Internationalizing
 
 - [ ] Create the _internationalizing_ system
 - [ ] translate it to portuguese
