@@ -1,6 +1,6 @@
 # StrongPay
 
-The StrongHands and StrongHands MasterNode **official** mobile wallet.
+The [StrongHands](https://www.stronghands.info/) and [StrongHands MasterNode](https://www.stronghands.info/masternodes/) **official** mobile wallet.
 
 ## Progress
 
