@@ -2,6 +2,8 @@
 
 The [StrongHands](https://www.stronghands.info/) and [StrongHands MasterNode](https://www.stronghands.info/masternodes/) **official** mobile wallet.
 
+[![GitHub stars](https://img.shields.io/github/stars/lapadev/strongpay?style=social)](https://github.com/lapadev/strongpay)
+
 ## Progress
 
 ### UI
