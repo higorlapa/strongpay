@@ -45,8 +45,14 @@ Create the UI for:
 ## Donation
 
 If you want to help us to speed it up, please, donate it to the following addresses:
+
+
 **SHND:** SVBTWGQCPVFh42RDQ9CS7GG8H9VHa8WhEN
+
+
 **ETH:** 0x7cfcd24e50424182641778c38bdcb38ad9bbb8b7
+
+
 **BTC:** 1NQH4UeawPfFZx8bx5qViFqeQDsQEPYx6U
 
 
