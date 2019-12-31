@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:strongpay/data/sharedpreference_helper.dart';
 
-class Theme {
+class Theming {
 
 
   bool isDark;
@@ -8,15 +9,15 @@ class Theme {
   /// It's a singleton, calling it more than once
   /// will result in the same instance of the same
   /// object
-  static Theme _instance;
+  static Theming _instance;
 
 
-  factory Theme.getInstance({bool isDark = false}) {
-    _instance ??= Theme._internalConstructor(isDark);
+  factory Theming.getInstance({bool isDark = false}) {
+    _instance ??= Theming._internalConstructor(isDark);
     return _instance;
   }
 
-  Theme._internalConstructor(this.isDark);
+  Theming._internalConstructor(this.isDark);
 
   Future<bool> _isDarkTheme() async {
 
@@ -26,5 +27,15 @@ class Theme {
 
   }
 
+  Future<ThemeData> getThemeData() async {
+
+    bool isDark = await _isDarkTheme();
+    if(isDark) {
+      return ThemeData();
+    } else {
+      return ThemeData();
+    }
+
+  }
 
 }
