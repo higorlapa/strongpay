@@ -23,7 +23,8 @@ Create the UI for:
 
 ### Refactoring
 
-- [ ] Change to BLoC pattern
+- [ ] Change to MobX pattern
+- [ ] Implements Retrofit
 
 ### Features
 
