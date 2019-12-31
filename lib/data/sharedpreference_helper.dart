@@ -7,7 +7,7 @@ class SharedPreferenceHelper {
 
   static Future<void> setDarkTheme(bool isDark) async {
 
-    if(_preferences == null) _preferences = await SharedPreferences.getInstance();
+    _preferences = await _getPrefs();
 
     _preferences.setBool(SPConstants.IS_DARK_THEME_KEY, isDark);
 
@@ -15,9 +15,18 @@ class SharedPreferenceHelper {
 
   static Future<bool> isDarkThemePref() async  {
 
-    if(_preferences == null) _preferences = await SharedPreferences.getInstance();
+    _preferences = await _getPrefs();
 
     return _preferences.getBool(SPConstants.IS_DARK_THEME_KEY);
+
+  }
+
+  static Future<SharedPreferences> _getPrefs() async {
+
+    if(_preferences == null) _preferences = await SharedPreferences.getInstance();
+
+    return _preferences;
+
 
   }
 
