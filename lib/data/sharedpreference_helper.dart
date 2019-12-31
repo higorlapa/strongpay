@@ -30,4 +30,13 @@ class SharedPreferenceHelper {
 
   }
 
+  static initDebugValues() {
+    /// DEBUG ONLY
+    SharedPreferences.setMockInitialValues({
+      SPConstants.USER_EMAIL_KEY: "",
+      SPConstants.USER_PASSWORD_KEY: "",
+      SPConstants.USER_PIN_KEY: ""
+    });
+  }
+
 }

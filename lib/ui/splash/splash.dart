@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:strongpay/data/sharedpreference_helper.dart';
 import 'package:strongpay/ui/index/index.dart';
 import 'package:strongpay/ui/login/login.dart';
 import 'package:strongpay/ui/pin/pin.dart';
@@ -57,28 +58,25 @@ class _SplashScreenState extends State<SplashScreen> {
 
     super.initState();
 
-    /// DEBUG ONLY
-    SharedPreferences.setMockInitialValues({
-      SPConstants.USER_EMAIL_KEY: "",
-      SPConstants.USER_PASSWORD_KEY: "",
-      SPConstants.USER_PIN_KEY: ""
-    });
+    /// ToDo: Remove it
+    SharedPreferenceHelper.initDebugValues();
 
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      final Brightness brightnessValue =
-          MediaQuery.of(context).platformBrightness;
+
       setState(() {
-        _isDark = brightnessValue == Brightness.dark;
         _shouldFadeOut = true;
       });
-      initSplashScreen();
+
+      _initSplashScreen();
+
     });
   }
 
-  Future<void> initSplashScreen() async {
+  Future<void> _initSplashScreen() async {
+
     SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
 
-    bool isUserLogged = await checkIfUserIsLogged();
+    bool isUserLogged = await _checkIfUserIsLogged();
 
     await Future.delayed(const Duration(milliseconds: 1500), () {
       Navigator.pushReplacement(
@@ -89,7 +87,7 @@ class _SplashScreenState extends State<SplashScreen> {
     });
   }
 
-  Future<bool> checkIfUserIsLogged() async {
+  Future<bool> _checkIfUserIsLogged() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     var userEmail = prefs.getString(SPConstants.USER_EMAIL_KEY);
     return (userEmail != null && userEmail.isNotEmpty);
