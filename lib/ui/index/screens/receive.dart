@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ReceivePage extends StatefulWidget {
+class ReceiveScreen extends StatefulWidget {
   @override
-  _ReceivePageState createState() => _ReceivePageState();
+  _ReceiveScreenState createState() => _ReceiveScreenState();
 }
 
-class _ReceivePageState extends State<ReceivePage> {
+class _ReceiveScreenState extends State<ReceiveScreen> {
   @override
   Widget build(BuildContext context) {
     return Container();

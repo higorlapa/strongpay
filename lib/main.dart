@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
           primarySwatch: Colors.yellow,
           fontFamily: GoogleFonts.montserrat().fontFamily),
-      home: SplashScreenPage(),
+      home: SplashScreen(),
     );
   }
 }

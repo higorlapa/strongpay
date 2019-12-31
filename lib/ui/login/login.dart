@@ -3,12 +3,12 @@ import 'package:flutter/scheduler.dart';
 import 'package:strongpay/ui/new_wallet/new_wallet.dart';
 import 'package:strongpay/utils/enter_exit_route.dart';
 
-class LoginPage extends StatefulWidget {
+class LoginScreen extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginScreenState extends State<LoginScreen> {
   bool _isDark = false;
 
   Image _logoDarkTheme = Image.asset('images/logo_yellow_strongpay_clean.png');
@@ -75,8 +75,8 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.push(
                           context,
                           EnterExitRoute(
-                              exitPage: LoginPage(),
-                              enterPage: NewWalletPage()));
+                              exitPage: LoginScreen(),
+                              enterPage: NewWalletScreen()));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(18.0),

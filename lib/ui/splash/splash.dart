@@ -8,12 +8,12 @@ import 'package:strongpay/ui/login/login.dart';
 import 'package:strongpay/ui/pin/pin.dart';
 import 'package:strongpay/utils/sp_constants.dart';
 
-class SplashScreenPage extends StatefulWidget {
+class SplashScreen extends StatefulWidget {
   @override
-  _SplashScreenPageState createState() => _SplashScreenPageState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SplashScreenPageState extends State<SplashScreenPage> {
+class _SplashScreenState extends State<SplashScreen> {
   bool _isDark = false;
 
   Image _logoDarkTheme = Image.asset('images/logo_strongpay_yellow.png');

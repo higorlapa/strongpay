@@ -4,12 +4,12 @@ import 'package:flutter/widgets.dart';
 import 'package:strongpay/ui/pin/widgets/numeric_keyboard_widget.dart';
 import 'package:strongpay/ui/pin/widgets/pin_circle_widget.dart';
 
-class PinPage extends StatefulWidget {
+class PinScreen extends StatefulWidget {
   @override
-  _PinPageState createState() => _PinPageState();
+  _PinScreenState createState() => _PinScreenState();
 }
 
-class _PinPageState extends State<PinPage> {
+class _PinScreenState extends State<PinScreen> {
   Color _backgroundDarkTheme = Colors.black;
   Color _backgroundLightTheme = Colors.white;
 

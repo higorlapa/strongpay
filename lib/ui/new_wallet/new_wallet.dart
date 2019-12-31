@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
-class NewWalletPage extends StatefulWidget {
+class NewWalletScreen extends StatefulWidget {
   @override
-  _NewWalletPageState createState() => _NewWalletPageState();
+  _NewWalletScreenState createState() => _NewWalletScreenState();
 }
 
-class _NewWalletPageState extends State<NewWalletPage> {
+class _NewWalletScreenState extends State<NewWalletScreen> {
   bool _isObscureText = true;
 
   bool _isDark = false;

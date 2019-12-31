@@ -13,7 +13,7 @@ class _IndexPageState extends State<IndexPage> {
 
   int _selectedPage = 0;
 
-  final _pageOptions = [HomePage(), SendPage(), SwapPage(), ReceivePage()];
+  final _pageOptions = [HomeScreen(), SendScreen(), SwapScreen(), ReceiveScreen()];
 
   AppBar _appBar = AppBar();
 

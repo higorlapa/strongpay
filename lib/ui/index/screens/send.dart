@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SendPage extends StatefulWidget {
+class SendScreen extends StatefulWidget {
   @override
-  _SendPageState createState() => _SendPageState();
+  _SendScreenState createState() => _SendScreenState();
 }
 
-class _SendPageState extends State<SendPage> {
+class _SendScreenState extends State<SendScreen> {
   @override
   Widget build(BuildContext context) {
     return Container();

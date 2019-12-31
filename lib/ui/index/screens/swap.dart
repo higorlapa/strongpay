@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SwapPage extends StatefulWidget {
+class SwapScreen extends StatefulWidget {
   @override
-  _SwapPageState createState() => _SwapPageState();
+  _SwapScreenState createState() => _SwapScreenState();
 }
 
-class _SwapPageState extends State<SwapPage> {
+class _SwapScreenState extends State<SwapScreen> {
   @override
   Widget build(BuildContext context) {
     return Container();
