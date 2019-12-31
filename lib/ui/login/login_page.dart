@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:strongpay/pages/new_wallet/new_wallet_page.dart';
+import 'package:strongpay/ui/new_wallet/new_wallet_page.dart';
 import 'package:strongpay/utils/enter_exit_route.dart';
 
 class LoginPage extends StatefulWidget {

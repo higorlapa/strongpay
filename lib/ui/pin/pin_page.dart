@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/widgets.dart';
-import 'package:strongpay/pages/pin/widgets/numeric_keyboard_widget.dart';
-import 'package:strongpay/pages/pin/widgets/pin_circle_widget.dart';
+import 'package:strongpay/ui/pin/widgets/numeric_keyboard_widget.dart';
+import 'package:strongpay/ui/pin/widgets/pin_circle_widget.dart';
 
 class PinPage extends StatefulWidget {
   @override

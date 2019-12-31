@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:strongpay/pages/index/index_page.dart';
-import 'package:strongpay/pages/login/login_page.dart';
-import 'package:strongpay/pages/pin/pin_page.dart';
+import 'package:strongpay/ui/index/index_page.dart';
+import 'package:strongpay/ui/login/login_page.dart';
+import 'package:strongpay/ui/pin/pin_page.dart';
 import 'package:strongpay/utils/sp_constants.dart';
 
 class SplashScreenPage extends StatefulWidget {
