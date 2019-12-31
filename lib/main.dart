@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:strongpay/ui/splash/splash.dart';
-import 'package:strongpay/ui/theming/theme.dart';
+import 'package:strongpay/ui/theming/theming_object.dart';
 
 void main() async {
 
-  var theme = await  Theming.getInstance().getThemeData();
+  var theme = await  Theming().getThemeData();
   runApp(MaterialApp(theme: theme));
 }
 
