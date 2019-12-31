@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
-import 'pages/pages.dart';
+import 'screens/screens.dart';
 
 class IndexPage extends StatefulWidget {
   @override
