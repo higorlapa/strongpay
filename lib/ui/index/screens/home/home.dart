@@ -84,26 +84,30 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(fontSize: 22),
                   ),
                 ),
-               Container(
-                 padding: EdgeInsets.symmetric(vertical: 10),
-                 child:  Row(
-                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                   children: <Widget>[
-                     Text('Coin'),
-                     Text('Amount'),
-                     Text('Date'),
-                   ],
-                 ),
-               ),
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: _transactionsList.length,
-                    itemBuilder: (context, index) {
-                      return TransactionWidget(
-                          transaction: _transactionsList[index]);
-                    },
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Text('Coin'),
+                      Text('Amount'),
+                      Text('Date'),
+                    ],
                   ),
-                )
+                ),
+                _transactionsList.length > 0
+                    ? Expanded(
+                        child: ListView.builder(
+                          itemCount: _transactionsList.length,
+                          itemBuilder: (context, index) {
+                            return TransactionWidget(
+                                transaction: _transactionsList[index]);
+                          },
+                        ),
+                      )
+                    : Container(
+                        child: Text("No transactions"),
+                      )
               ],
             ))
       ],
