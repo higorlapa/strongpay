@@ -24,14 +24,14 @@ class _IndexPageState extends State<IndexPage> {
       appBar: AppBar(
         title: Text(
           "StrongPay",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.yellow),
         ),
         centerTitle: true,
       ),
       body: _pageOptions[_selectedPage],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.white,
+        selectedItemColor: Colors.yellow,
         unselectedItemColor: Colors.black,
         currentIndex: _selectedPage,
         onTap: (int index) {
