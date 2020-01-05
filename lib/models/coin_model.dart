@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CoinModel {
-  Icon icon;
+  Image image;
   String name;
   double priceInDollar;
   double princeInBTC;
@@ -11,5 +11,5 @@ class CoinModel {
   double totalAmountInBTC;
   double totalAmountInDollar;
 
-  CoinModel({this.icon, this.priceInDollar, this.princeInBTC});
+  CoinModel({this.image, this.priceInDollar, this.princeInBTC});
 }
