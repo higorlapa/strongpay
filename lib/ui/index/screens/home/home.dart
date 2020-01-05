@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:strongpay/models/coin_model.dart';
+
+import 'widgets/coin_balance_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -6,6 +9,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+
+  ///static coin model
+  final CoinModel coinModel = CoinModel(image: Image.asset("images/ic_stronghands_small.png"), name: 'StrongHands', priceInDollar: 0.00033, princeInBTC: 0.0000004);
+  final CoinModel coinModelMN = CoinModel(image: Image.asset("images/ic_masternode_small.png"), name: 'StrongHands Master Node', priceInDollar: 0.00033, princeInBTC: 0.0000004);
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -43,9 +52,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
+                CoinBalanceWidget(
+                  coinModel: coinModel,
+                ),
+                CoinBalanceWidget(
+                  coinModel: coinModelMN,
+                ),
+                Divider(thickness: 1,),
                 Container(
-                  height: 150,
-                  child: Card(child: Container()),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Transactions',
+                    style: TextStyle(
+                      fontSize: 22
+                    ),
+                  ),
                 )
               ],
             ))

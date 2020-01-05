@@ -11,5 +11,5 @@ class CoinModel {
   double totalAmountInBTC;
   double totalAmountInDollar;
 
-  CoinModel({this.image, this.priceInDollar, this.princeInBTC});
+  CoinModel({this.image, this.name, this.priceInDollar, this.princeInBTC});
 }
