@@ -9,13 +9,6 @@ part of 'transaction.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$Transaction on TransactionBase, Store {
-  Computed<DateTime> _$transactionDateComputed;
-
-  @override
-  DateTime get transactionDate => (_$transactionDateComputed ??=
-          Computed<DateTime>(() => super.transactionDate))
-      .value;
-
   final _$transactionAtom = Atom(name: 'TransactionBase.transaction');
 
   @override
@@ -31,5 +24,22 @@ mixin _$Transaction on TransactionBase, Store {
       super.transaction = value;
       _$transactionAtom.reportChanged();
     }, _$transactionAtom, name: '${_$transactionAtom.name}_set');
+  }
+
+  final _$transactionListAtom = Atom(name: 'TransactionBase.transactionList');
+
+  @override
+  List<TransactionModel> get transactionList {
+    _$transactionListAtom.context.enforceReadPolicy(_$transactionListAtom);
+    _$transactionListAtom.reportObserved();
+    return super.transactionList;
+  }
+
+  @override
+  set transactionList(List<TransactionModel> value) {
+    _$transactionListAtom.context.conditionallyRunInAction(() {
+      super.transactionList = value;
+      _$transactionListAtom.reportChanged();
+    }, _$transactionListAtom, name: '${_$transactionListAtom.name}_set');
   }
 }

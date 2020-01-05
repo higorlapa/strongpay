@@ -5,10 +5,12 @@ part 'transaction.g.dart';
 class Transaction = TransactionBase with _$Transaction;
 
 abstract class TransactionBase with Store {
+
   @observable
   TransactionModel transaction;
 
-  @computed
-  DateTime get transactionDate =>
-      DateTime.fromMicrosecondsSinceEpoch(transaction.timestamp);
+  @observable
+  List<TransactionModel> transactionList;
+
+
 }
