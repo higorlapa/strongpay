@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 
 import 'screens/screens.dart';
 
@@ -24,14 +23,14 @@ class _IndexPageState extends State<IndexPage> {
       appBar: AppBar(
         title: Text(
           "StrongPay",
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.yellow),
+          style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xffffd600)),
         ),
         centerTitle: true,
       ),
       body: _pageOptions[_selectedPage],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.yellow,
+        selectedItemColor: Color(0xffffd600),
         unselectedItemColor: Colors.black,
         currentIndex: _selectedPage,
         onTap: (int index) {
