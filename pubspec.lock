@@ -317,6 +317,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.0+1"
+  mobx_codegen:
+    dependency: "direct dev"
+    description:
+      name: mobx_codegen
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.0+1"
   node_interop:
     dependency: transitive
     description:
