@@ -47,7 +47,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
                   fontWeight: FontWeight.bold),
             ),
           ),
-          Text(transaction.timestamp.toString()),
+          Text(transaction.transactionDate),
         ],
       ),
     );
