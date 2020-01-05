@@ -9,18 +9,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  bool _isDark = false;
-
-  Image _logoDarkTheme = Image.asset('images/logo_yellow_strongpay_clean.png');
-  Image _logoLightTheme = Image.asset('images/logo_black_strongpay_clean.png');
-
-  Color _backgroundDarkTheme = Colors.black;
-  Color _backgroundLightTheme = Colors.white;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _isDark ? _backgroundDarkTheme : _backgroundLightTheme,
+      backgroundColor: Colors.black,
       body: Stack(
         children: <Widget>[
           Positioned(
@@ -32,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Container(
                     width: 80,
                     height: 80,
-                    child: _isDark ? _logoDarkTheme : _logoLightTheme,
+                    child: Image.asset('images/logo_yellow_strongpay_clean.png'),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 40),
@@ -49,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 16,
-                          color: _isDark ? Colors.grey : Colors.black38,
+                          color: Colors.grey ,
                           fontWeight: FontWeight.bold),
                     ),
                   )
@@ -69,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text('Create a wallet',
                         style: TextStyle(
                             fontSize: 20,
-                            color: _isDark ? Colors.white : Colors.black87,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold)),
                     onPressed: () {
                       Navigator.push(
@@ -100,16 +93,4 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  @override
-  void initState() {
-    super.initState();
-
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      final Brightness brightnessValue =
-          MediaQuery.of(context).platformBrightness;
-      setState(() {
-        _isDark = brightnessValue == Brightness.dark;
-      });
-    });
-  }
 }

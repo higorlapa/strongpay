@@ -58,22 +58,18 @@ class _PinScreenState extends State<PinScreen> {
                       PinCircleWidget(
                         value:
                             _pinValueList.length >= 1 ? _pinValueList[0] : "",
-                        isDarkTheme: _isDark,
                       ),
                       PinCircleWidget(
                         value:
                             _pinValueList.length >= 2 ? _pinValueList[1] : "",
-                        isDarkTheme: _isDark,
                       ),
                       PinCircleWidget(
                         value:
                             _pinValueList.length >= 3 ? _pinValueList[2] : "",
-                        isDarkTheme: _isDark,
                       ),
                       PinCircleWidget(
                         value:
                             _pinValueList.length >= 4 ? _pinValueList[3] : "",
-                        isDarkTheme: _isDark,
                       ),
                     ],
                   ),

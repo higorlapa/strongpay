@@ -9,8 +9,6 @@ class NewWalletScreen extends StatefulWidget {
 class _NewWalletScreenState extends State<NewWalletScreen> {
   bool _isObscureText = true;
 
-  bool _isDark = false;
-
   final TextEditingController _emailTextController = TextEditingController();
   final TextEditingController _passwordTextController = TextEditingController();
 
@@ -23,7 +21,7 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
-        backgroundColor: _isDark ? Colors.black : Colors.white,
+        backgroundColor: Colors.black,
         body: Stack(
           children: <Widget>[
             Align(
@@ -42,11 +40,11 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
                             Theme(
                               data: ThemeData(
                                 primaryColor:
-                                    _isDark ? Colors.white : Colors.black,
+                                    Colors.white,
                                 accentColor:
-                                    _isDark ? Colors.white : Colors.black,
+                                    Colors.white ,
                                 hintColor:
-                                    _isDark ? Colors.white : Colors.black,
+                                    Colors.white,
                               ),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(
@@ -65,12 +63,13 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
                             Theme(
                                 data: ThemeData(
                                     primaryColor:
-                                        _isDark ? Colors.white : Colors.black,
+                                        Colors.white,
                                     accentColor:
-                                        _isDark ? Colors.white : Colors.black,
+                                        Colors.white,
                                     hintColor:
-                                        _isDark ? Colors.white : Colors.black,
-                                    cursorColor: Colors.white),
+                                        Colors.white,
+                                    cursorColor: Colors.white
+                                ),
                                 child: Padding(
                                   padding: EdgeInsets.only(
                                       top: 5, right: 30, left: 30, bottom: 20),
@@ -108,11 +107,11 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
                             Theme(
                               data: ThemeData(
                                 primaryColor:
-                                    _isDark ? Colors.white : Colors.black,
+                                    Colors.white,
                                 accentColor:
-                                    _isDark ? Colors.white : Colors.black,
+                                    Colors.white,
                                 hintColor:
-                                    _isDark ? Colors.white : Colors.black,
+                                Colors.white,
                               ),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(
@@ -131,11 +130,11 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
                             Theme(
                                 data: ThemeData(
                                     primaryColor:
-                                        _isDark ? Colors.white : Colors.black,
+                                        Colors.white,
                                     accentColor:
-                                        _isDark ? Colors.white : Colors.black,
+                                        Colors.white,
                                     hintColor:
-                                        _isDark ? Colors.white : Colors.black,
+                                        Colors.white,
                                     cursorColor: Colors.white),
                                 child: Padding(
                                   padding: EdgeInsets.only(
@@ -176,7 +175,7 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
                   child: Text('Create wallet',
                       style: TextStyle(
                           fontSize: 20,
-                          color: _isDark ? Colors.white : Colors.black87,
+                          color: Colors.white,
                           fontWeight: FontWeight.bold)),
                   onPressed: () {
                     //handle wallet creation
@@ -199,15 +198,4 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
     String price,
   }) {}
 
-  @override
-  void initState() {
-    super.initState();
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      final Brightness brightnessValue =
-          MediaQuery.of(context).platformBrightness;
-      setState(() {
-        _isDark = brightnessValue == Brightness.dark;
-      });
-    });
-  }
 }

@@ -9,23 +9,27 @@ class IndexPage extends StatefulWidget {
 }
 
 class _IndexPageState extends State<IndexPage> {
-  bool _isDark = false;
 
   int _selectedPage = 0;
 
   final _pageOptions = [HomeScreen(), SendScreen(), SwapScreen(), ReceiveScreen()];
 
-  AppBar _appBar = AppBar();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _appBar ?? AppBar(),
+      appBar: AppBar(
+        title: Text(
+          "StrongPay",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+      ),
       body: _pageOptions[_selectedPage],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: _isDark ? Colors.white : Colors.black,
-        unselectedItemColor: _isDark ? Colors.black : Colors.grey,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.black,
         currentIndex: _selectedPage,
         onTap: (int index) {
           setState(() {
@@ -43,36 +47,6 @@ class _IndexPageState extends State<IndexPage> {
     );
   }
 
-  @override
-  void initState() {
-    super.initState();
 
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      final Brightness brightnessValue =
-          MediaQuery.of(context).platformBrightness;
-      setState(() {
-        _isDark = brightnessValue == Brightness.dark;
-        _initUi();
-      });
-    });
-  }
 
-  void _initUi() {
-    setState(() {
-      _appBar = _isDark
-          ? AppBar(
-              title: Text(
-                "StrongPay",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              centerTitle: true,
-            )
-          : AppBar(
-              title: Text("StrongPay",
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-              centerTitle: true,
-              backgroundColor: Colors.yellow,
-            );
-    });
-  }
 }

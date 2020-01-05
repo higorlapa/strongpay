@@ -15,40 +15,24 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  bool _isDark = false;
-
-  Image _logoDarkTheme = Image.asset('images/logo_strongpay_yellow.png');
-  Image _logoLightTheme = Image.asset('images/logo_strongpay_black.png');
-
-  Color _backgroundDarkTheme = Colors.black;
-  Color _backgroundLightTheme = Colors.white;
 
   bool _shouldFadeOut = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _isDark ? _backgroundDarkTheme : _backgroundLightTheme,
+      backgroundColor: Colors.black,
       body: Center(
-          child: _isDark
-              ? AnimatedOpacity(
+          child: AnimatedOpacity(
                   opacity: _shouldFadeOut ? 1.0 : 0.0,
                   duration: Duration(milliseconds: 1000),
                   child: Container(
                     width: 150.0,
                     height: 150.0,
-                    child: _logoDarkTheme,
+                    child: Image.asset('images/logo_strongpay_yellow.png'),
                   ),
-                )
-              : AnimatedOpacity(
-                  opacity: _shouldFadeOut ? 1.0 : 0.0,
-                  duration: Duration(milliseconds: 1000),
-                  child: Container(
-                    width: 150.0,
-                    height: 150.0,
-                    child: _logoLightTheme,
-                  ),
-                )),
+                ),)
+
     );
   }
 

@@ -2,15 +2,8 @@ import 'package:flutter/material.dart';
 
 class PinCircleWidget extends StatelessWidget {
   final String value;
-  final bool isDarkTheme;
 
-  final Color _darkThemeBorderColor = Colors.white;
-  final Color _lightThemeBorderColor = Colors.black;
-
-  final Color _darkThemeEmptyColor = Colors.black;
-  final Color _lighthemeEmptyColor = Colors.white;
-
-  PinCircleWidget({this.value, this.isDarkTheme = false})
+  PinCircleWidget({this.value})
       : assert(value != null);
 
   @override
@@ -20,14 +13,11 @@ class PinCircleWidget extends StatelessWidget {
       width: 20,
       height: 20,
       decoration: new BoxDecoration(
+
         border: Border.all(
-            color:
-                isDarkTheme ? _darkThemeBorderColor : _lightThemeBorderColor),
-        color: value.isEmpty
-            ? (isDarkTheme ? _darkThemeEmptyColor : _lighthemeEmptyColor)
-            : (isDarkTheme ? _lighthemeEmptyColor : _darkThemeEmptyColor),
-        shape: BoxShape.circle,
+        color: value.isEmpty ?  Colors.black : Colors.white ,
       ),
-    );
+        shape: BoxShape.circle
+    ));
   }
 }
