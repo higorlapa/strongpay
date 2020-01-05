@@ -15,25 +15,23 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   bool _shouldFadeOut = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
+        backgroundColor: Colors.black,
+        body: Center(
           child: AnimatedOpacity(
-                  opacity: _shouldFadeOut ? 1.0 : 0.0,
-                  duration: Duration(milliseconds: 1000),
-                  child: Container(
-                    width: 150.0,
-                    height: 150.0,
-                    child: Image.asset('images/logo_strongpay_yellow.png'),
-                  ),
-                ),)
-
-    );
+            opacity: _shouldFadeOut ? 1.0 : 0.0,
+            duration: Duration(milliseconds: 1000),
+            child: Container(
+              width: 150.0,
+              height: 150.0,
+              child: Image.asset('images/logo_strongpay_yellow.png'),
+            ),
+          ),
+        ));
   }
 
   @override
@@ -46,18 +44,15 @@ class _SplashScreenState extends State<SplashScreen> {
     SharedPreferenceHelper.initDebugValues();
 
     SchedulerBinding.instance.addPostFrameCallback((_) {
-
       setState(() {
         _shouldFadeOut = true;
       });
 
       _initSplashScreen();
-
     });
   }
 
   Future<void> _initSplashScreen() async {
-
     SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
 
     bool isUserLogged = await _checkIfUserIsLogged();

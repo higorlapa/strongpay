@@ -39,12 +39,9 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
                           children: <Widget>[
                             Theme(
                               data: ThemeData(
-                                primaryColor:
-                                    Colors.white,
-                                accentColor:
-                                    Colors.white ,
-                                hintColor:
-                                    Colors.white,
+                                primaryColor: Colors.white,
+                                accentColor: Colors.white,
+                                hintColor: Colors.white,
                               ),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(
@@ -62,14 +59,10 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
                             ),
                             Theme(
                                 data: ThemeData(
-                                    primaryColor:
-                                        Colors.white,
-                                    accentColor:
-                                        Colors.white,
-                                    hintColor:
-                                        Colors.white,
-                                    cursorColor: Colors.white
-                                ),
+                                    primaryColor: Colors.white,
+                                    accentColor: Colors.white,
+                                    hintColor: Colors.white,
+                                    cursorColor: Colors.white),
                                 child: Padding(
                                   padding: EdgeInsets.only(
                                       top: 5, right: 30, left: 30, bottom: 20),
@@ -106,12 +99,9 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
                           children: <Widget>[
                             Theme(
                               data: ThemeData(
-                                primaryColor:
-                                    Colors.white,
-                                accentColor:
-                                    Colors.white,
-                                hintColor:
-                                Colors.white,
+                                primaryColor: Colors.white,
+                                accentColor: Colors.white,
+                                hintColor: Colors.white,
                               ),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(
@@ -129,12 +119,9 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
                             ),
                             Theme(
                                 data: ThemeData(
-                                    primaryColor:
-                                        Colors.white,
-                                    accentColor:
-                                        Colors.white,
-                                    hintColor:
-                                        Colors.white,
+                                    primaryColor: Colors.white,
+                                    accentColor: Colors.white,
+                                    hintColor: Colors.white,
                                     cursorColor: Colors.white),
                                 child: Padding(
                                   padding: EdgeInsets.only(
@@ -197,5 +184,4 @@ class _NewWalletScreenState extends State<NewWalletScreen> {
     String name,
     String price,
   }) {}
-
 }

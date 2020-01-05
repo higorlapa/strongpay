@@ -9,7 +9,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +24,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   Container(
                     width: 80,
                     height: 80,
-                    child: Image.asset('images/logo_yellow_strongpay_clean.png'),
+                    child:
+                        Image.asset('images/logo_yellow_strongpay_clean.png'),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 40),
@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 16,
-                          color: Colors.grey ,
+                          color: Colors.grey,
                           fontWeight: FontWeight.bold),
                     ),
                   )
@@ -92,5 +92,4 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-
 }

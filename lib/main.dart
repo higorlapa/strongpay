@@ -5,7 +5,6 @@ import 'package:strongpay/ui/splash/splash.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,8 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           brightness: Brightness.dark,
           primarySwatch: Colors.yellow,
-          fontFamily: GoogleFonts.montserrat().fontFamily
-      ),
+          fontFamily: GoogleFonts.montserrat().fontFamily),
       home: SplashScreen(),
     );
   }

@@ -32,8 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Container(
-                          margin:
-                          EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                          margin: EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 15),
                           child: Text(
                             "\$ 0,00",
                             style: TextStyle(fontSize: 20),
@@ -45,13 +45,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Container(
                   height: 150,
-                  child: Card(
-                    child: Container()
-                  ),
+                  child: Card(child: Container()),
                 )
               ],
-            )
-        )
+            ))
       ],
     );
   }

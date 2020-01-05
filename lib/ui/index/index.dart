@@ -9,11 +9,14 @@ class IndexPage extends StatefulWidget {
 }
 
 class _IndexPageState extends State<IndexPage> {
-
   int _selectedPage = 0;
 
-  final _pageOptions = [HomeScreen(), SendScreen(), SwapScreen(), ReceiveScreen()];
-
+  final _pageOptions = [
+    HomeScreen(),
+    SendScreen(),
+    SwapScreen(),
+    ReceiveScreen()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +49,4 @@ class _IndexPageState extends State<IndexPage> {
       ),
     );
   }
-
-
-
 }
