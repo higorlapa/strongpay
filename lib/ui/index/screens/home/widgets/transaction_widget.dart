@@ -3,18 +3,16 @@ import 'package:flutter/material.dart';
 import '../../../../../models/transaction_model.dart';
 
 class TransactionWidget extends StatefulWidget {
-
   final TransactionModel transaction;
 
   TransactionWidget({this.transaction}) : assert(transaction != null);
 
   @override
-  _TransactionWidgetState createState() => _TransactionWidgetState(this.transaction);
+  _TransactionWidgetState createState() =>
+      _TransactionWidgetState(this.transaction);
 }
 
 class _TransactionWidgetState extends State<TransactionWidget> {
-
-
   final TransactionModel transaction;
 
   _TransactionWidgetState(this.transaction);
@@ -28,7 +26,6 @@ class _TransactionWidgetState extends State<TransactionWidget> {
         border: Border.all(),
         color: Colors.grey,
         borderRadius: BorderRadius.all(Radius.circular(5)),
-
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -41,12 +38,14 @@ class _TransactionWidgetState extends State<TransactionWidget> {
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 10),
-            child: Text(transaction.amount.toString(),
-            style: TextStyle(
-              color: transaction.transactionType == TransactionType.SEND ?
-                  Colors.red : Colors.green,
-              fontWeight: FontWeight.bold
-            ),),
+            child: Text(
+              transaction.amount.toString(),
+              style: TextStyle(
+                  color: transaction.transactionType == TransactionType.SEND
+                      ? Colors.red
+                      : Colors.green,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
           Text(transaction.timestamp.toString()),
         ],

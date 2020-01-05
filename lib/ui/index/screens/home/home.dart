@@ -11,18 +11,25 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-
   ///static coin model
-  static final CoinModel coinModel = CoinModel(image: Image.asset("images/ic_stronghands_small.png"), name: 'StrongHands', priceInDollar: 0.00033, princeInBTC: 0.0000004);
-  final CoinModel coinModelMN = CoinModel(image: Image.asset("images/ic_masternode_small.png"), name: 'StrongHands Master Node', priceInDollar: 0.00033, princeInBTC: 0.0000004);
+  static final CoinModel coinModel = CoinModel(
+      image: Image.asset("images/ic_stronghands_small.png"),
+      name: 'StrongHands',
+      priceInDollar: 0.00033,
+      princeInBTC: 0.0000004);
+  final CoinModel coinModelMN = CoinModel(
+      image: Image.asset("images/ic_masternode_small.png"),
+      name: 'StrongHands Master Node',
+      priceInDollar: 0.00033,
+      princeInBTC: 0.0000004);
 
-  List<TransactionModel> _transactionsList = [TransactionModel(
-    coin: coinModel,
-    timestamp: 100000,
-    amount: 20,
-    transactionType: TransactionType.SEND
-  )];
+  List<TransactionModel> _transactionsList = [
+    TransactionModel(
+        coin: coinModel,
+        timestamp: 100000,
+        amount: 20,
+        transactionType: TransactionType.SEND)
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -67,20 +74,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 CoinBalanceWidget(
                   coinModel: coinModelMN,
                 ),
-                Divider(thickness: 1,),
+                Divider(
+                  thickness: 1,
+                ),
                 Container(
                   alignment: Alignment.center,
                   child: Text(
                     'Transactions',
-                    style: TextStyle(
-                      fontSize: 22
-                    ),
+                    style: TextStyle(fontSize: 22),
                   ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                      Text('Coin'),
+                    Text('Coin'),
                     Text('Amount'),
                     Text('Date'),
                   ],
@@ -90,8 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemCount: _transactionsList.length,
                     itemBuilder: (context, index) {
                       return TransactionWidget(
-                          transaction: _transactionsList[index]
-                      );
+                          transaction: _transactionsList[index]);
                     },
                   ),
                 )
@@ -100,6 +106,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ],
     );
   }
-
-
 }

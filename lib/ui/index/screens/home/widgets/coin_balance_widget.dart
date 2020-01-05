@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:strongpay/models/coin_model.dart';
 
 class CoinBalanceWidget extends StatelessWidget {
-
   final CoinModel coinModel;
 
   CoinBalanceWidget({this.coinModel}) : assert(coinModel != null);
