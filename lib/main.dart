@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:strongpay/ui/splash/splash.dart';
-import 'package:strongpay/ui/theming/theming_object.dart';
 
-void main() async {
-
-  var theme = await  Theming().getThemeData();
-  runApp(MaterialApp(theme: theme));
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  final ThemeData theme;
-  MyApp(this.theme);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'StrongPay',
       debugShowCheckedModeBanner: false,
-      theme: theme,
+      theme: ThemeData(
+          brightness: Brightness.dark,
+          primarySwatch: Colors.yellow,
+          fontFamily: GoogleFonts.montserrat().fontFamily
+      ),
       home: SplashScreen(),
     );
   }
