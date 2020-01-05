@@ -39,13 +39,13 @@ class _TransactionWidgetState extends State<TransactionWidget> {
             height: 20,
             child: transaction.coin.image,
           ),
-          ///ToDo: Change it later
           Container(
             margin: EdgeInsets.symmetric(horizontal: 10),
             child: Text(transaction.amount.toString(),
             style: TextStyle(
               color: transaction.transactionType == TransactionType.SEND ?
-                  Colors.red : Colors.green
+                  Colors.red : Colors.green,
+              fontWeight: FontWeight.bold
             ),),
           ),
           Text(transaction.timestamp.toString()),

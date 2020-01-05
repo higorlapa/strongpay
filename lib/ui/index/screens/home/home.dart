@@ -77,6 +77,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                      Text('Coin'),
+                    Text('Amount'),
+                    Text('Date'),
+                  ],
+                ),
                 Expanded(
                   child: ListView.builder(
                     itemCount: _transactionsList.length,
