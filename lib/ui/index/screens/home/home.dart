@@ -24,11 +24,11 @@ class _HomeScreenState extends State<HomeScreen> {
       princeInBTC: 0.0000004);
 
   List<TransactionModel> _transactionsList = [
-    TransactionModel(
-        coin: coinModel,
-        timestamp: 100000,
-        amount: 20,
-        transactionType: TransactionType.SEND)
+//    TransactionModel(
+//        coin: coinModel,
+//        timestamp: 100000,
+//        amount: 20,
+//        transactionType: TransactionType.SEND)
   ];
 
   @override
@@ -49,10 +49,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           end: Alignment.bottomCenter,
                           colors: [
 //                            Colors.black,
-                            Color(0xff202020),
-                            Color(0xff212830),
+                        Color(0xff212121),
+                        Color(0xff212830),
 //                            Color(0xff565539),
-                          ])),
+                      ])),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -66,8 +66,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.symmetric(
-                            vertical: 10, horizontal: 15),
+                        margin:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                         child: Text(
                           "\$ 0,00",
                           style: TextStyle(fontSize: 20),
@@ -92,17 +92,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(fontSize: 22),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Text('Coin'),
-                      Text('Amount'),
-                      Text('Date'),
-                    ],
-                  ),
-                ),
+                _transactionsList.length > 0
+                    ? Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Text('Coin'),
+                            Text('Amount'),
+                            Text('Date'),
+                          ],
+                        ),
+                      )
+                    : Container(),
                 _transactionsList.length > 0
                     ? Expanded(
                         child: ListView.builder(
@@ -114,7 +116,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       )
                     : Container(
-                        child: Text("No transactions"),
+                        margin: EdgeInsets.only(top: 100),
+                        width: MediaQuery.of(context).size.width,
+                        child: Text("No transactions records :(",
+                            style: TextStyle(fontSize: 18, color: Colors.grey),
+                            textAlign: TextAlign.center),
                       )
               ],
             ))
