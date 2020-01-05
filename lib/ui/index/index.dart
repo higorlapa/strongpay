@@ -21,6 +21,7 @@ class _IndexPageState extends State<IndexPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: _selectedPage == 0 ? 0 : 3,
         title: Text(
           "StrongPay",
           style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xffffd600)),

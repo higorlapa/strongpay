@@ -43,29 +43,37 @@ class _HomeScreenState extends State<HomeScreen> {
               children: <Widget>[
                 Container(
                   height: 150,
-                  child: Card(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget>[
-                        Container(
-                          margin: EdgeInsets.only(top: 25, left: 15),
-                          child: Text(
-                            "Total Balance",
-                            style: TextStyle(fontSize: 22, color: Colors.grey),
-                          ),
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+//                            Colors.black,
+                            Color(0xff202020),
+                            Color(0xff212830),
+//                            Color(0xff565539),
+                          ])),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.only(top: 25, left: 15),
+                        child: Text(
+                          "Total Balance",
+                          style: TextStyle(fontSize: 22, color: Colors.grey),
                         ),
-                        Container(
-                          margin: EdgeInsets.symmetric(
-                              vertical: 10, horizontal: 15),
-                          child: Text(
-                            "\$ 0,00",
-                            style: TextStyle(fontSize: 20),
-                          ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 15),
+                        child: Text(
+                          "\$ 0,00",
+                          style: TextStyle(fontSize: 20),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 CoinBalanceWidget(
